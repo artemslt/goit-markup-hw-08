@@ -1,10 +1,12 @@
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__title {
+    margin-bottom: 30px;
+
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
     color: $main-black-color;
@@ -12,19 +14,26 @@
 
   &__list {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    flex-wrap: wrap;
+
+    margin: -15px;
+  }
+
+  &__card {
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
   }
 
   &__link {
     display: flex;
-    width: 170px;
-    height: 92px;
-    border: 1px solid $social-icon-color;
-    border-radius: 4px;
     justify-content: center;
     align-items: center;
+
+    padding: 16px 0;
+
     color: $social-icon-color;
+    border: 1px solid $social-icon-color;
+    border-radius: 4px;
 
     transition: color 250ms $animation-cube, border 250ms $animation-cube;
 
@@ -38,8 +47,4 @@
   .client__icon {
     fill: currentColor;
   }
-}
-
-.client__card + .client__card {
-  margin-left: 30px;
 }
