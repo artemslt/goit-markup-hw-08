@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,9 +14,43 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    z-index: 9999;
+
+    &:hover,
+    &:focus {
+      fill: $accent-blue-color;
+    }
+
+    .header__icon-close {
+      display: none;
+    }
+
+    &.is-open .header__icon-close {
+      display: block;
+      fill: currentColor;
+      &:hover,
+      &:focus {
+        fill: $accent-blue-color;
+      }
+    }
+
+    &.is-open .header__icon-menu {
+      display: none;
+    }
   }
 
   &__list {
     display: none;
+    padding: 48px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: #fff;
+
+    &.is-open {
+      display: block;
+    }
   }
 }

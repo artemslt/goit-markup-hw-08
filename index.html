@@ -28,14 +28,23 @@
         <a class="logo header__logo" href="./index.html">
           <span class="logo__accent">Web</span>Studio</a
         >
-        <button class="header__menu-button" type="button">
-          <svg width="40" height="40">
-            <use href="./images/symbol-defs.svg#icon-mobmenu"></use>
-            <use href="./images/symbol-defs.svg#icon-close-mobmenu"></use>
+        <button
+          class="header__menu-button"
+          type="button"
+          aria-controls="header__list"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="header__icon-menu" href="./images/symbol-defs.svg#icon-mobmenu"></use>
+            <use
+              class="header__icon-close"
+              href="./images/symbol-defs.svg#icon-close-mobmenu"
+            ></use>
           </svg>
         </button>
 
-        <nav class="header__list">
+        <nav class="header__list" id="header__list" data-menu>
           <ul class="main-nav">
             <li class="main-nav__item">
               <a class="main-nav__link underline" href="./index.html">Студия</a>
@@ -46,22 +55,28 @@
             <li class="main-nav__item"><a class="main-nav__link" href="">Контакты</a></li>
           </ul>
           <ul class="header-contacts">
-            <li class="header-contact__item">
-              <a class="header-contact__link" href="mailto:info@devstudio.com">
-                <svg class="header-contact_icon" width="16" height="12">
+            <li class="header-contacts__item">
+              <a class="header-contacts__link" href="mailto:info@devstudio.com">
+                <svg class="header-contacts__icon" width="16" height="12">
                   <use href="./images/symbol-defs.svg#icon-envelope"></use>
                 </svg>
-                mailto:info@devstudio.com</a
+                info@devstudio.com</a
               >
             </li>
-            <li class="header-contact__item">
-              <a class="header-contact__link" href="tel:+380961111111">
-                <svg class="header-contact_icon" width="10" height="16">
+            <li class="header-contacts__item">
+              <a class="header-contacts__link" href="tel:+380961111111">
+                <svg class="header-contacts__icon" width="10" height="16">
                   <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a
               >
             </li>
+          </ul>
+          <ul class="header__social-list">
+            <li class="header__social-item"><a class="header__social-link href="#"></a>Instagram</li>
+            <li class="header__social-item"><a class="header__social-link href="#"></a>Twitter</li>
+            <li class="header__social-item"><a class="header__social-link href="#"></a>Facebook</li>
+            <li class="header__social-item"><a class="header__social-link href="#"></a>Linkedin</li>
           </ul>
         </nav>
       </div>
@@ -150,7 +165,12 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/product-designer.jpg" alt="Фото Игорь Демьяненко" width="270" />
+              <img
+                srcset="./images/product-designer@1x.jpg 1x, ./images/product-designer@2x.jpg 2x"
+                src="./images/product-designer@1x.jpg"
+                alt="Фото Игорь Демьяненко"
+                width="450"
+              />
               <div class="team__card">
                 <h3 class="team__member">Игорь Демьяненко</h3>
                 <p>Product Designer</p>
@@ -187,7 +207,15 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/frontend-developer.jpg" alt="Фото Ольга Репина" width="270" />
+              <img
+                srcset="
+                  ./images/frontend-developer@1x.jpg 1x,
+                  ./images/frontend-developer@2x.jpg 2x
+                "
+                src="./images/frontend-developer@1x.jpg"
+                alt="Фото Ольга Репина"
+                width="450"
+              />
               <div class="team__card">
                 <h3 class="team__member">Ольга Репина</h3>
                 <p>Frontend Developer</p>
@@ -224,7 +252,12 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/marketing.jpg" alt="Фото Николай Тарасов" width="270" />
+              <img
+                srcset="./images/marketing@1x.jpg 1x, ./images/marketing@2x.jpg 2x"
+                src="./images/marketing@1x.jpg"
+                alt="Фото Николай Тарасов"
+                width="450"
+              />
               <div class="team__card">
                 <h3 class="team__member">Николай Тарасов</h3>
                 <p>Marketing</p>
@@ -261,7 +294,12 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/ui-designer.jpg" alt="Фото Михаил Ермаков" width="270" />
+              <img
+                srcset="./images/ui-designer@1x.jpg 1x, ./images/ui-designer@2x.jpg 2x"
+                src="./images/ui-designer@1x.jpg"
+                alt="Фото Михаил Ермаков"
+                width="450"
+              />
               <div class="team__card">
                 <h3 class="team__member">Михаил Ермаков</h3>
                 <p>UI Designer</p>
@@ -463,5 +501,6 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
