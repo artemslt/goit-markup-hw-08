@@ -24,6 +24,23 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.feature__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.feature__item {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    margin: 15px;
   }
 }

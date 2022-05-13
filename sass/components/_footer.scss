@@ -32,6 +32,9 @@
   &__social {
     margin-bottom: 60px;
     margin-top: 60px;
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
   }
 
   &__accent {
@@ -40,6 +43,22 @@
     border-radius: 50%;
     color: $main-white-color;
     background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &__meta {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.signup-form {
+  @media screen and (min-width: 768px) {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

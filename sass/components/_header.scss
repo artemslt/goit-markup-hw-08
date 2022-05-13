@@ -5,7 +5,7 @@
   align-items: center;
 
   min-height: 60px;
-
+  z-index: 9;
   border-bottom: 1px solid #ececec;
 
   &__menu-button {
@@ -15,6 +15,10 @@
     border: none;
     background-color: transparent;
     z-index: 10;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
 
     &:hover,
     &:focus {
@@ -40,17 +44,21 @@
   }
 
   &__list {
-    display: none;
-    padding: 48px 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    display: flex;
 
-    background-color: #fff;
+    @media screen and (max-width: 767px) {
+      pointer-events: none;
+      visibility: hidden;
 
-    pointer-events: none;
-    visibility: hidden;
+      display: none;
+      padding: 48px 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      background-color: #fff;
+    }
 
     &.is-open {
       display: block;
