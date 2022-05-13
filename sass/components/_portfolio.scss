@@ -1,16 +1,15 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.portfolio__list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.portfolio__item + .portfolio__item {
-  margin-left: 8px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+    padding-bottom: 40px;
+  }
+  &__item {
+    margin: 8px;
+  }
 }
 
 .portfolio__button {

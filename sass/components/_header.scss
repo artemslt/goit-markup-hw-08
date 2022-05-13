@@ -14,7 +14,7 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    z-index: 9999;
+    z-index: 10;
 
     &:hover,
     &:focus {
@@ -49,8 +49,13 @@
 
     background-color: #fff;
 
+    pointer-events: none;
+    visibility: hidden;
+
     &.is-open {
       display: block;
+      pointer-events: initial;
+      visibility: visible;
     }
   }
 }

@@ -17,22 +17,21 @@
   border: 1px solid #eeeeee;
 }
 
-.examples {
-  display: flex;
-  flex-wrap: wrap;
-}
+// .examples {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
 
-.examples__card {
-  margin-right: 30px;
+.examples__card:not(:last-child) {
   margin-bottom: 30px;
 }
-.examples__card:nth-of-type(3n) {
-  margin-right: 0;
-}
+// .examples__card:nth-of-type(3n) {
+//   margin-right: 0;
+// }
 
-.examples__card:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
+// .examples__card:nth-last-child(-n + 3) {
+//   margin-bottom: 0;
+// }
 
 .examples__card:hover,
 .examples__card:focus {
