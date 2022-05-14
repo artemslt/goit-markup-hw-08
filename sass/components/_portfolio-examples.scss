@@ -1,3 +1,19 @@
+.examples {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  &__card {
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 6 * 15px) / 3);
+    }
+  }
+}
+
 .examples__title {
   margin-bottom: 4px;
   font-weight: 700;
@@ -16,11 +32,6 @@
   display: block;
   border: 1px solid #eeeeee;
 }
-
-// .examples {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
 
 .examples__card:not(:last-child) {
   margin-bottom: 30px;

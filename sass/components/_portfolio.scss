@@ -1,11 +1,16 @@
 .portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     margin: -8px;
     padding-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+    }
   }
   &__item {
     margin: 8px;

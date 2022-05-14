@@ -21,6 +21,10 @@
     text-align: center;
     text-transform: uppercase;
     color: $main-black-color;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &__item:not(:last-child) {
@@ -40,7 +44,10 @@
 
 .feature__item {
   @media screen and (min-width: 768px) {
-    width: 354px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 8 * 15px) / 4);
   }
 }

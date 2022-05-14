@@ -8,6 +8,10 @@
   z-index: 9;
   border-bottom: 1px solid #ececec;
 
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+
   &__menu-button {
     display: inline-flex;
     margin: 0;
@@ -64,6 +68,10 @@
       display: block;
       pointer-events: initial;
       visibility: visible;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 94px;
     }
   }
 }
