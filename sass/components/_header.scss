@@ -18,15 +18,11 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
     z-index: 10;
 
     @media screen and (min-width: 768px) {
       display: none;
-    }
-
-    &:hover,
-    &:focus {
-      fill: $accent-blue-color;
     }
 
     .header__icon-close {
@@ -36,14 +32,14 @@
     &.is-open .header__icon-close {
       display: block;
       fill: currentColor;
-      &:hover,
-      &:focus {
-        fill: $accent-blue-color;
-      }
     }
 
     &.is-open .header__icon-menu {
       display: none;
+    }
+
+    &:hover {
+      fill: $accent-blue-color;
     }
   }
 

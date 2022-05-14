@@ -54,6 +54,7 @@
     letter-spacing: 0.02em;
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
     transition: color 250ms var $animation-cube;
   }
 
@@ -61,12 +62,9 @@
     display: inline-block;
     margin-right: 10px;
     fill: currentColor;
-    cursor: pointer;
   }
 
-  .header-contacts__icon:hover,
-  .header-contacts__icon:focus,
-  .header-contacs__link:hover,
+  .header-contacts__link:hover,
   .header-contacts__link:focus {
     color: $accent-blue-color;
   }
