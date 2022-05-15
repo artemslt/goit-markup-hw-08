@@ -2,10 +2,12 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     margin: -15px;
   }
 
   &__card {
+    border: 1px solid #eeeeee;
     flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
     @media screen and (min-width: 1200px) {
@@ -29,12 +31,6 @@
 
 .examples__meta {
   padding: 20px 24px;
-  display: block;
-  border: 1px solid #eeeeee;
-}
-
-.examples__card:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .examples__card:hover,
