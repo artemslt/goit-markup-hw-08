@@ -858,9 +858,16 @@ img {
   opacity: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .backdrope.is-hidden .modal {
+    -webkit-transform: translate(-50%, -50%) scale(1.5);
+            transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
 .modal {
   position: relative;
-  min-width: 450px;
+  max-width: 450px;
   padding: 40px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -870,6 +877,27 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 528px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .modal__button {
@@ -921,6 +949,13 @@ img {
   line-height: 1.5;
   text-align: center;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .order-form__title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .order-form__lable {
