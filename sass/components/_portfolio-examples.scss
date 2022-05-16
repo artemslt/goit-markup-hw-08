@@ -3,13 +3,24 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+
     margin: -15px;
   }
 
   &__card {
     border: 1px solid #eeeeee;
-    flex-basis: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      flex-basis: calc((100% - 4 * 15px) / 2);
+    }
+
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 6 * 15px) / 3);
     }
